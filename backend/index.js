@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5050;
+const port = 3306;
 const connection = require("./conf");
 const bodyParser = require("body-parser");
 
@@ -19,6 +19,4 @@ app.listen(port, err => {
   if (err) {
     throw new Error("Something bad happened...");
   }
-
-  console.log(`Server is listening on ${port}`);
 });
