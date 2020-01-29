@@ -25,7 +25,7 @@ export default function MainPage() {
       <div className="news">
         <h2>- News -</h2>
         <h3>Bonne nouvelle, le tome 40 va bientôt sortir !</h3>
-        <img src="./images/tome40.png/" />
+        <img src="/images/tome40.png" />
         <p>
           Le brouillard est tombé sur les routes de Hakone ! Ikeda des Spiral
           est parti en tête, talonné par Keisuke, et il compte sur sa “théorie
