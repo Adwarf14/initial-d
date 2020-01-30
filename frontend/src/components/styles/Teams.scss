@@ -1,0 +1,37 @@
+.teams {
+  background: white;
+  color: black;
+  width: 100%;
+  margin-bottom: 4vh;
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    margin: 5vh;
+  }
+  .teamInfo {
+    background-color: black;
+    color: white;
+    display: flex;
+    border-radius: 15px;
+    border: black 5px solid;
+    margin: 2vh;
+    .logo {
+      background-color: white;
+      img {
+        width: 200px;
+        height: 150px;
+        image-rendering: auto;
+        margin: 1vh 2vw;
+      }
+    }
+    h2 {
+      text-align: center;
+      margin: auto 2vw;
+    }
+    p {
+      text-align: left;
+      margin: auto 2vw;
+    }
+  }
+}

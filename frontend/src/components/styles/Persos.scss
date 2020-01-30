@@ -1,0 +1,34 @@
+.persos {
+  background: white;
+  color: black;
+  width: 100%;
+  margin-bottom: 4vh;
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    margin: 5vh;
+  }
+  .persoInfo {
+    display: flex;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin: 2vh;
+
+    img {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin: 1vh 2vw;
+    }
+
+    h2 {
+      text-align: center;
+      margin: auto 2vw;
+    }
+    p {
+      text-align: left;
+      margin: auto 2vw;
+    }
+  }
+}

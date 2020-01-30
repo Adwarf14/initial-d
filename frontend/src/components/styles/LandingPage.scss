@@ -1,4 +1,12 @@
 .landingPage {
-  background: url("./images/Initial_D_BG.jpg");
-  background-size: cover;
+  height: 100vh;
+  background: url("/images/imgBG.png");
+  background-repeat: no-repeat;
+  background-size: 1570px 740px;
+  video {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 45vh;
+  }
 }
