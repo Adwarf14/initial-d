@@ -1,14 +1,12 @@
 require("dotenv").config();
-
 const mysql = require("mysql");
 
 const db = mysql.createPool({
-  connectionLimit: 10,
-  host: process.env.DB_HOST || "example.org", // adresse du serveur
-  user: process.env.DB_USER || "bob", // le nom d'utilisateur
-  password: process.env.DB_PASSWORD || "secret", // le mot de passe
-  backendPort: process.env.BACKEND_PORT || "4200",
-  database: process.env.DB_DATABASE || "my_db" // le nom de la base de données
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  backendPort: process.env.BACKEND_PORT,
+  database: process.env.DB_DATABASE
 });
 
-module.exports = { db };
+module.exports = { db, backendPort: process.env.BACKEND_PORT };
