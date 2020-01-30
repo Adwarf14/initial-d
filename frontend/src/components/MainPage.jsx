@@ -1,9 +1,11 @@
 import React from "react";
 import "./styles/MainPage.scss";
+import NavBar from "./NavBar";
 
 export default function MainPage() {
   return (
     <div className="mainPage">
+      <NavBar />
       <h1>INITIAL D</h1>
       <div className="synopsis">
         <h2>- Synopsis -</h2>
