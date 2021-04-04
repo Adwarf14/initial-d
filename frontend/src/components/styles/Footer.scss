@@ -1,0 +1,19 @@
+.footer {
+  background: black;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+  font-size: larger;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+
+  .made {
+    margin-left: 42.5%;
+  }
+  .copy {
+    margin-right: 10%;
+  }
+}

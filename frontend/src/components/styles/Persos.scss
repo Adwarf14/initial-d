@@ -1,8 +1,13 @@
+@import "./variables";
 .persos {
-  background: white;
+  font-family: $mainFontFamily;
   color: black;
+  height: 100%;
   width: 100%;
-  margin-bottom: 4vh;
+  overflow-y: auto;
+  bottom: 50px;
+  top: 100px;
+  position: fixed;
   h1 {
     font-size: 2em;
     text-align: center;
