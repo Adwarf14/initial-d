@@ -1,39 +1,52 @@
 const express = require("express");
 const app = express();
-const { db, backendPort } = require("./conf");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+const connection = require("./config");
+const port = 3000;
 
-app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true
-  })
-);
-app.use(cors());
+app.get("/", (req, res) => {
+  res.send("Welcome to the database of the INITIAL D Project !");
+});
 
-app.get("/api/persos", (req, res) => {
-  db.query("SELECT * from perso", (err, results) => {
-    if (err) {
-      res.status(500).send("Erreur lors de la récupération des personnages");
+app.get("/perso", (req, res) => {
+  connection.query("SELECT * FROM perso", (error, results) => {
+    if (error) {
+      res.statut(500).send("Error retrieving data");
     } else {
       res.status(200).json(results);
     }
   });
 });
 
-app.get("/api/teams", (req, res) => {
-  db.query("SELECT * from team", (err, results) => {
-    if (err) {
-      res.status(500).send("Erreur lors de la récupération des personnages");
+app.get("/team", (req, res) => {
+  connection.query("SELECT * FROM team", (error, results) => {
+    if (error) {
+      res.statut(500).send("Error retrieving data");
     } else {
       res.status(200).json(results);
     }
   });
 });
 
-app.listen(backendPort, err => {
-  if (err) {
-    throw new Error("Something bad happened...");
-  }
+app.get("/voiture", (req, res) => {
+  connection.query("SELECT * FROM voiture", (error, results) => {
+    if (error) {
+      res.statut(500).send("Error retrieving data");
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
+app.get("/menu", (req, res) => {
+  connection.query("SHOW TABLES", (error, results) => {
+    if (error) {
+      res.statut(500).send("Error retrieving data");
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on ${port}`);
 });
